@@ -4,7 +4,9 @@ const form = document.querySelector('form');
 votes.forEach(el => {
   el.addEventListener('click', e => {
     e.preventDefault();
-    console.log('test');
+
+    form.querySelector('input[name="vote"]').value = el.dataset.value;
+
     form.classList.remove('active');
     form.classList.add('active');
   });

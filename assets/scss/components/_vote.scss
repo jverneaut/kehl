@@ -17,27 +17,30 @@
   display: inline-block;
   margin-right: 8px;
 
-  &::before {
-    background: white;
-    width: 20px;
-    height: 20px;
-    content: '';
-    position: absolute;
-    left: 24px;
-    top: 50%;
-    transform: translate(0px, -50%);
-    border-radius: 20px;
-  }
-
   &--approve {
     background: $oc-green-2;
-    &::before {
-      background: $oc-green-4;
-    }
   }
 
   &--deny {
+    color: $oc-gray-7;
   }
+}
+
+.vote__btn span:first-child {
+  background: white;
+  width: 24px;
+  height: 24px;
+  content: '';
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 24px;
+  top: 50%;
+  transform: translate(0px, -50%);
+  border-radius: 20px;
+  text-align: center;
+  font-size: 14px;
 }
 
 .vote form {
