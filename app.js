@@ -1,5 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const helmet = require('helmet');
+
 const router = require('./router');
 
 // Setup
@@ -12,6 +14,8 @@ app.use(express.static('assets/img'));
 // Middlewares
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+
+app.use(helmet());
 
 // Routes
 app.use(router);
