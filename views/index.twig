@@ -1,5 +1,22 @@
 {% extends "base.twig" %}
 
 {% block content %}
-  <h1>Kehl</h1>
+  <section class="main">
+    <div class="row">
+      <div class="col-8">
+        <h1>Est-ce qu'on peut aller à Kehl ?</h1>
+        <h2>
+          <strong>Non,</strong>
+          <span>mais tu peux toujours aller au Morfal.</span>
+        </h2>
+      </div>
+    </div>
+  </section>
+
+  <section class="vote">
+    <a href="#" class="vote-btn vote-btn--approve">Approuver</a>
+    <a href="#" class="vote-btn vote-btn--deny">Rejeter</a>
+  </section>
+
+  <section class="sources"></section>
 {% endblock %}
