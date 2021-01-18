@@ -4844,7 +4844,8 @@ body {
 
 .main h1 {
   font-size: 16px;
-  color: #adb5bd; }
+  color: #adb5bd;
+  font-weight: 400; }
 
 .main h2 {
   margin-top: 12px;
@@ -4885,4 +4886,37 @@ body {
     background: #b2f2bb; }
     .vote__btn--approve::before {
       background: #69db7c; }
+
+.header {
+  position: relative; }
+
+.header nav {
+  position: absolute;
+  left: 0;
+  top: 24px; }
+
+.header a {
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  color: #212529;
+  text-decoration: none; }
+
+.header a img {
+  width: auto;
+  height: 20px;
+  margin-left: 8px; }
+
+.footer {
+  margin-top: 40px;
+  border-top: 1px solid #e9ecef;
+  padding: 40px 0; }
+
+.footer p {
+  color: #adb5bd;
+  font-weight: 400;
+  font-size: 14px; }
+
+.footer p a {
+  color: #212529; }
 

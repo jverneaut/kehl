@@ -1,6 +1,15 @@
 {% extends "base.twig" %}
 
 {% block content %}
+  <section class="header">
+    <nav>
+      <a href="https://github.com/jverneaut/khel">
+        <span>Code source</span>
+        <img src="/github.svg" alt="">
+      </a>
+    </nav>
+  </section>
+
   <section class="main">
     <div class="row">
       <div class="col-12 col-md-10 col-lg-9 col-xl-8">
@@ -21,4 +30,11 @@
   </section>
 
   <section class="sources"></section>
+
+  <section class="footer">
+    <p>
+      <span>Développé en Alsace par les cerveaux derrière</span>
+      <a href="https://www.strasbourre.fr">StrasBourre.</a>
+    </p>
+  </section>
 {% endblock %}

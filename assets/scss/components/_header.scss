@@ -1,0 +1,23 @@
+.header {
+  position: relative;
+}
+
+.header nav {
+  position: absolute;
+  left: 0;
+  top: 24px;
+}
+
+.header a {
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  color: $oc-gray-9;
+  text-decoration: none;
+}
+
+.header a img {
+  width: auto;
+  height: 20px;
+  margin-left: 8px;
+}
