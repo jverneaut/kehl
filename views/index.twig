@@ -13,23 +13,20 @@
   <section class="main">
     {% if error %}
       <div class="message message--error">
-        <h3>Une erreur s'est produite lors de l'envoi de votre demande. Veuillez réessayer ultérieurement.</h3>
+        <h3>Une erreur s'est produite lors de l'envoi de ta demande. Merci de réessayer ultérieurement.</h3>
       </div>
     {% endif %}
 
     {% if voted %}
       <div class="message message--voted">
-        <h3>Merci pour votre vote. Il a bien été pris en compte dans le résultat.</h3>
+        <h3>Merci pour ton vote. Il a bien été pris en compte dans le résultat final.</h3>
       </div>
     {% endif %}
 
     <div class="row">
       <div class="col-12 col-md-10 col-lg-9 col-xl-8">
         <h1>Est-ce qu'on peut aller à Kehl ?</h1>
-        <h2>
-          <strong>Non,</strong>
-          <span>mais tu peux toujours aller au Morfal.</span>
-        </h2>
+        <h2>{{ content }}</h2>
       </div>
     </div>
   </section>

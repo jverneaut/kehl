@@ -1,0 +1,11 @@
+{
+  "yes": [
+    "<strong>Oui,</strong> c'est ouvert !"
+  ],
+  "no": [
+    "<strong>Non,</strong> mais tu peux toujours aller au Morfal."
+  ],
+  "maybe": [
+    "Les votes ne permettent pas de donner une réponse fiable."
+  ]
+}

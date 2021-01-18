@@ -1,11 +1,13 @@
 const recaptcha = require('./services/recaptcha');
 const { knex } = require('./db');
 
+const content = require('./content.json');
+
 const getVotes = async () => {
   const today = new Date();
-  const todayMinus24Hours = today.setDate(today.getDate() - 1);
+  const todayMinus48Hours = today.setDate(today.getDate() - 2);
 
-  const votes = await knex('votes').where('date', '>=', todayMinus24Hours);
+  const votes = await knex('votes').where('date', '>=', todayMinus48Hours);
 
   return votes.reduce(
     (acc, curr) => {
@@ -15,12 +17,37 @@ const getVotes = async () => {
   );
 };
 
-const getDefaultParams = async res => ({
-  recaptcha: res.recaptcha,
-  voted: false,
-  error: false,
-  votes: await getVotes(),
-});
+const getContent = votes => {
+  // Maybe
+  if (votes[0] === votes[1]) {
+    return content.maybe[Math.floor(Math.random() * content.maybe.length)];
+  }
+
+  // Yes
+  if (votes[0] > votes[1]) {
+    return content.yes[Math.floor(Math.random() * content.yes.length)];
+  }
+
+  // No
+  if (votes[0] < votes[1]) {
+    return content.no[Math.floor(Math.random() * content.no.length)];
+  }
+};
+
+const getDefaultParams = async res => {
+  const votes = await getVotes();
+  const content = getContent(votes);
+
+  console.log(content);
+
+  return {
+    recaptcha: res.recaptcha,
+    voted: false,
+    error: false,
+    votes,
+    content,
+  };
+};
 
 module.exports.index = [
   recaptcha.middleware.render,

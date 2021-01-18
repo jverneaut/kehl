@@ -16,13 +16,21 @@
   color: black;
   display: inline-block;
   margin-right: 8px;
+  transition: 0.2s;
 
   &--approve {
-    background: $oc-green-2;
+    background: $oc-green-3;
+    &:hover {
+      background: $oc-green-4;
+    }
   }
 
   &--deny {
     color: $oc-gray-7;
+    &:hover {
+      color: $oc-gray-9;
+      background: $oc-gray-2;
+    }
   }
 }
 
