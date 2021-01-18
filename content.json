@@ -3,9 +3,11 @@
     "<strong>Oui,</strong> c'est ouvert !"
   ],
   "no": [
-    "<strong>Non,</strong> mais tu peux toujours aller au Morfal."
+    "<strong>Non,</strong> mais tu peux toujours aller au Morfal.",
+    "<strong>Non,</strong> mais fumer c'est mal m'voyez.",
+    "<strong>Non,</strong> et le tram D t'en remercie."
   ],
   "maybe": [
-    "Les votes ne permettent pas de donner une réponse fiable."
+    "Les votes ne permettent pas de donner une réponse fiable pour le moment."
   ]
 }
