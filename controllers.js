@@ -38,8 +38,6 @@ const getDefaultParams = async res => {
   const votes = await getVotes();
   const content = getContent(votes);
 
-  console.log(content);
-
   return {
     recaptcha: res.recaptcha,
     voted: false,
