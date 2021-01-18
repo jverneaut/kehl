@@ -11,6 +11,18 @@
   </section>
 
   <section class="main">
+    {% if error %}
+      <div class="message message--error">
+        <h3>Une erreur s'est produite lors de l'envoi de votre demande. Veuillez réessayer ultérieurement.</h3>
+      </div>
+    {% endif %}
+
+    {% if voted %}
+      <div class="message message--voted">
+        <h3>Merci pour votre vote. Il a bien été pris en compte dans le résultat.</h3>
+      </div>
+    {% endif %}
+
     <div class="row">
       <div class="col-12 col-md-10 col-lg-9 col-xl-8">
         <h1>Est-ce qu'on peut aller à Kehl ?</h1>
@@ -23,13 +35,17 @@
   </section>
 
   <section class="vote">
+    <h4>Votes dans les dernières 48h</h4>
     <div class="vote__btns">
       <a href="#" class="vote__btn vote__btn--approve">Approuver</a>
       <a href="#" class="vote__btn vote__btn--deny">Rejeter</a>
     </div>
-  </section>
 
-  <section class="sources"></section>
+    <form action="/" method="POST">
+      <input type="hidden" name="vote">
+      {{ recaptcha }}
+    </form>
+  </section>
 
   <section class="footer">
     <p>

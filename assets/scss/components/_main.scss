@@ -22,3 +22,29 @@
   font-weight: 600;
   color: $oc-gray-8;
 }
+
+.main .message {
+  margin-bottom: 40px;
+  background: $oc-gray-1;
+  padding: 12px 16px;
+  border: 1px solid $oc-gray-2;
+}
+
+.main .message h3 {
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0;
+  color: inherit;
+}
+
+.main .message--voted {
+  background-color: $oc-green-1;
+  border-color: $oc-green-2;
+  color: $oc-green-9;
+}
+
+.main .message--error {
+  background-color: $oc-red-1;
+  border-color: $oc-red-2;
+  color: $oc-red-9;
+}

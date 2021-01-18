@@ -39,3 +39,16 @@
   &--deny {
   }
 }
+
+.vote form {
+  display: none;
+  margin-top: 24px;
+
+  &.active {
+    display: block;
+  }
+}
+
+.vote h4 {
+  font-size: 20px;
+}

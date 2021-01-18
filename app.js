@@ -1,4 +1,5 @@
 const express = require('express');
+const bodyParser = require('body-parser');
 const router = require('./router');
 
 // Setup
@@ -9,6 +10,8 @@ app.use(express.static('dist'));
 app.use(express.static('assets/img'));
 
 // Middlewares
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // Routes
 app.use(router);
