@@ -7,8 +7,15 @@
 
 .main h1 {
   font-size: 16px;
+  color: $oc-gray-5;
+}
+
+.main h2 {
+  font-size: 40px;
+  color: $oc-gray-7;
 }
 
 .main h2 strong {
-  color: $oc-red-7;
+  color: $oc-gray-9;
+  font-weight: 700;
 }

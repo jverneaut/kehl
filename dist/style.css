@@ -4843,10 +4843,16 @@ body {
   padding-bottom: 80px; }
 
 .main h1 {
-  font-size: 16px; }
+  font-size: 16px;
+  color: #adb5bd; }
+
+.main h2 {
+  font-size: 40px;
+  color: #495057; }
 
 .main h2 strong {
-  color: #f03e3e; }
+  color: #212529;
+  font-weight: 700; }
 
 .vote-btn {
   background: #f1f3f5;
