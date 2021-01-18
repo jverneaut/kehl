@@ -4855,6 +4855,9 @@ body {
   font-weight: 600;
   color: #343a40; }
 
+.vote {
+  margin-top: 32px; }
+
 .vote__btns {
   display: flex; }
 
