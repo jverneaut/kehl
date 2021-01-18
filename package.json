@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/jverneaut/kehl#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "twig": "^1.15.4"
   }
 }
