@@ -1,7 +1,11 @@
 .vote {
 }
 
-.vote-btn {
+.vote__btns {
+  display: flex;
+}
+
+.vote__btn {
   background: $oc-gray-1;
   border-radius: 8px;
   padding: 16px 24px;
@@ -9,6 +13,8 @@
   position: relative;
   text-decoration: none;
   color: black;
+  display: inline-block;
+  margin-right: 8px;
 
   &::before {
     background: white;
