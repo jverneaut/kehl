@@ -34,11 +34,11 @@
   <section class="vote">
     <h4>Votes dans les dernières 48h</h4>
     <div class="vote__btns">
-      <a href="#" class="vote__btn vote__btn--approve" data-value="yes">
+      <a href="#" class="vote__btn vote__btn--approve{{ votes[0] > votes[1] ? ' vote__btn--active' : '' }}" data-value="yes">
         <span>{{ votes[0] }}</span>
         <span>C'est ouvert</span>
       </a>
-      <a href="#" class="vote__btn vote__btn--deny" data-value="no">
+      <a href="#" class="vote__btn vote__btn--deny{{ votes[0] < votes[1] ? ' vote__btn--active' : '' }}" data-value="no">
         <span>{{ votes[1] }}</span>
         <span>C'est fermé</span>
       </a>
