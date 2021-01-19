@@ -63,17 +63,17 @@ new Chart(ctx, {
     labels,
     datasets: [
       {
-        label: 'Fermé',
-        data: closedData,
-        borderColor: colors.orange[4],
-        backgroundColor: colors.orange[0],
-        fill: false,
-      },
-      {
         label: 'Ouvert',
         data: openData,
         borderColor: colors.green[4],
         backgroundColor: colors.green[0],
+        fill: false,
+      },
+      {
+        label: 'Fermé',
+        data: closedData,
+        borderColor: colors.orange[4],
+        backgroundColor: colors.orange[0],
         fill: false,
       },
     ],
