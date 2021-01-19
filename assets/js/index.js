@@ -79,6 +79,10 @@ new Chart(ctx, {
     ],
   },
   options: {
+    legend: {
+      position: 'top',
+      align: 'end',
+    },
     scales: {
       xAxes: [
         {

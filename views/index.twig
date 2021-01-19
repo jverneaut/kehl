@@ -10,7 +10,7 @@
     </nav>
   </section>
 
-  <section class="main">
+  <section class="main main--{{ results[0] < results[1] ? 'closed' : 'open' }}">
     {% if error %}
       <div class="message message--error">
         <h3>Une erreur s'est produite lors de l'envoi de ta demande. Merci de réessayer ultérieurement.</h3>

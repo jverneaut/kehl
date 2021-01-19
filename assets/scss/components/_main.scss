@@ -19,8 +19,16 @@
 }
 
 .main h2 strong {
-  font-weight: 600;
+  font-weight: 700;
   color: $oc-gray-8;
+}
+
+.main--open h2 strong {
+  color: $oc-green-5;
+}
+
+.main--closed h2 strong {
+  color: $oc-orange-5;
 }
 
 .main .message {
