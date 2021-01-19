@@ -22,30 +22,40 @@
     color: $oc-gray-9;
     background: $oc-gray-2;
   }
+}
 
-  &--active {
-    background: $oc-green-3;
-    &:hover {
-      background: $oc-green-4;
-    }
+.vote__btn--approve.vote__btn--active {
+  color: $oc-gray-9;
+  background: $oc-green-3;
+  &:hover {
+    background: $oc-green-4;
+  }
+}
+
+.vote__btn--deny.vote__btn--active {
+  color: $oc-gray-9;
+  background: $oc-orange-4;
+  &:hover {
+    background: $oc-orange-5;
   }
 }
 
 .vote__btn span:first-child {
   background: white;
-  width: 24px;
-  height: 24px;
+  width: 32px;
+  height: 32px;
   content: '';
   position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
-  left: 24px;
+  left: 16px;
   top: 50%;
   transform: translate(0px, -50%);
   border-radius: 20px;
   text-align: center;
   font-size: 14px;
+  font-weight: 500;
 }
 
 .vote form {
