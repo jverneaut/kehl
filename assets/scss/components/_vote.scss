@@ -13,23 +13,20 @@
   padding-left: 56px;
   position: relative;
   text-decoration: none;
-  color: black;
   display: inline-block;
   margin-right: 8px;
   transition: 0.2s;
+  color: $oc-gray-7;
 
-  &--approve {
+  &:hover {
+    color: $oc-gray-9;
+    background: $oc-gray-2;
+  }
+
+  &--active {
     background: $oc-green-3;
     &:hover {
       background: $oc-green-4;
-    }
-  }
-
-  &--deny {
-    color: $oc-gray-7;
-    &:hover {
-      color: $oc-gray-9;
-      background: $oc-gray-2;
     }
   }
 }
