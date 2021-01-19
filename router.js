@@ -1,9 +1,9 @@
 const Router = require('express').Router;
-const controller = require('./controllers');
+const controllers = require('./controllers');
 
 const router = new Router();
 
-router.get('/', controller.index);
-router.post('/', controller.vote);
+router.get('/', controllers.index);
+router.post('/', controllers.vote);
 
 module.exports = router;
