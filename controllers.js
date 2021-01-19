@@ -8,41 +8,43 @@ const getVotes = async () => {
   const todayMinus48Hours = today.setDate(today.getDate() - 2);
 
   const votes = await knex('votes').where('date', '>=', todayMinus48Hours);
-
-  return votes.reduce(
+  const results = votes.reduce(
     (acc, curr) => {
       return curr.is_open == 1 ? [acc[0] + 1, acc[1]] : [acc[0], acc[1] + 1];
     },
     [0, 0]
   );
+
+  return { votes, results };
 };
 
-const getContent = votes => {
+const getContent = results => {
   // Maybe
-  if (votes[0] === votes[1]) {
+  if (results[0] === results[1]) {
     return content.maybe[Math.floor(Math.random() * content.maybe.length)];
   }
 
   // Yes
-  if (votes[0] > votes[1]) {
+  if (results[0] > results[1]) {
     return content.yes[Math.floor(Math.random() * content.yes.length)];
   }
 
   // No
-  if (votes[0] < votes[1]) {
+  if (results[0] < results[1]) {
     return content.no[Math.floor(Math.random() * content.no.length)];
   }
 };
 
 const getDefaultParams = async res => {
   const votes = await getVotes();
-  const content = getContent(votes);
+  const content = getContent(votes.results);
 
   return {
     recaptcha: res.recaptcha,
     voted: false,
     error: false,
-    votes,
+    votes: votes.votes,
+    results: votes.results,
     content,
   };
 };

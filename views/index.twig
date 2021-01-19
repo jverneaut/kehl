@@ -34,12 +34,12 @@
   <section class="vote">
     <h4>Votes dans les dernières 48h</h4>
     <div class="vote__btns">
-      <a href="#" class="vote__btn vote__btn--approve{{ votes[0] > votes[1] ? ' vote__btn--active' : '' }}" data-value="yes">
-        <span>{{ votes[0] }}</span>
+      <a href="#" class="vote__btn vote__btn--approve{{ results[0] > results[1] ? ' vote__btn--active' : '' }}" data-value="yes">
+        <span>{{ results[0] }}</span>
         <span>C'est ouvert</span>
       </a>
-      <a href="#" class="vote__btn vote__btn--deny{{ votes[0] < votes[1] ? ' vote__btn--active' : '' }}" data-value="no">
-        <span>{{ votes[1] }}</span>
+      <a href="#" class="vote__btn vote__btn--deny{{ results[0] < results[1] ? ' vote__btn--active' : '' }}" data-value="no">
+        <span>{{ results[1] }}</span>
         <span>C'est fermé</span>
       </a>
     </div>
@@ -50,10 +50,18 @@
     </form>
   </section>
 
+  <section class="graph">
+    <canvas></canvas>
+  </section>
+
   <section class="footer">
     <p>
       <span>Développé en Alsace par les cerveaux derrière</span>
       <a href="http://www.strasbourre.fr" target="_blank">StrasBourre.</a>
     </p>
   </section>
+
+  <script>
+    window.votes = {{ votes|json_encode }}
+  </script>
 {% endblock %}
