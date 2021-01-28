@@ -8,6 +8,10 @@
   font-size: 14px;
 }
 
+.footer p + p {
+  margin-top: 12px;
+}
+
 .footer p a {
   color: $oc-gray-9;
 }
