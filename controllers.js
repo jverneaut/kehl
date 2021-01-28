@@ -5,7 +5,12 @@ const content = require('./content.json');
 
 const getVotes = async () => {
   const today = new Date();
-  const todayMinus48Hours = today.setDate(today.getDate() - 2);
+  const todayMinus48Hours = new Date(today.setDate(today.getDate() - 2));
+
+  const count = await knex('votes')
+    .count('id as COUNT')
+    .first()
+    .then(res => res.COUNT);
 
   const votes = await knex('votes').where('date', '>=', todayMinus48Hours);
   const results = votes.reduce(
@@ -15,7 +20,7 @@ const getVotes = async () => {
     [0, 0]
   );
 
-  return { votes, results };
+  return { count, votes, results };
 };
 
 const getContent = results => {
@@ -43,8 +48,7 @@ const getDefaultParams = async res => {
     recaptcha: res.recaptcha,
     voted: false,
     error: false,
-    votes: votes.votes,
-    results: votes.results,
+    ...votes,
     content,
   };
 };
